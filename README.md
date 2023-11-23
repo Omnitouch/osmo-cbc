@@ -111,3 +111,9 @@ apt-get update
 
 apt-get install osmo-cbc
 ```
+
+
+Manual
+------
+
+https://ftp.osmocom.org/docs/osmo-cbc/master/osmocbc-usermanual.pdf
