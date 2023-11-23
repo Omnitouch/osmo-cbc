@@ -94,3 +94,20 @@ the skeletons, with git possibily showing changes in the following paths:
 - src/sbcap/gen/
 - src/sbcap/skel/
 
+
+Installing
+----------
+
+[On Ubuntu 20.04](https://osmocom.org/projects/cellular-infrastructure/wiki/Latest_Builds)
+
+```
+sudo su
+OSMOCOM_REPO="https://downloads.osmocom.org/packages/osmocom:/latest/xUbuntu_20.04"
+wget $OSMOCOM_REPO/Release.key
+sha256sum Release.key
+mv Release.key /etc/apt/trusted.gpg.d/osmocom-latest.asc
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/osmocom-latest.asc] $OSMOCOM_REPO/ ./" > /etc/apt/sources.list.d/osmocom-latest.list
+apt-get update
+
+apt-get install osmo-cbc
+```
